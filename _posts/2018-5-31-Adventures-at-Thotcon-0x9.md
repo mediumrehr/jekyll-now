@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Adventures at Thotcon 0x9
+youtubeId: v3yVL2lNKM4
 ---
 
 i’ve been missing out on [thotcon](https://thotcon.org/) the past few years while living in chicago, so i was happy to finally attend for the 9th installment. my goal from the start was to compete in the badge ctf in hopes of winning a coveted gold badge (admission to thotcon for life). i’m sad to say i missed most of the talks, but i had a blast crunching through the puzzles cooked up by [sakebomb](https://twitter.com/sakebomb).
@@ -37,7 +38,7 @@ i woke up early and cleaned my badge hack in my lab. i had the idea to implement
 
 i arrived at the con an hour late and immediately got to work finishing up the firmware for my badge hack (posted to [github](https://github.com/mediumrehr/thotcon0x9-Morse), if you’re curious). i was able to get it to transmit ‘SOS’ in morse code (transmitting ‘thotcon’ in the video below), and earn sakebombs approval (150 points).
 
-{% include youtubePlayer.html id=page.v3yVL2lNKM4 %}
+{% include youtubePlayer.html id=page.youtubeId %}
 
 that morning i also completed two other challenges. first, i tuned into the radio station sakebomb was broadcasting at 3.1m wavelength (aka 96.7 Hz). there were five or so songs he kept repeating, and it took me a bit to figure out the flag was part of one of the songs, dido’s black flag. “there will be no black flag above my door…”. this might have been my favorite flag due to the creativity of it. he had written on the badge ctf site that flags would follow the formate ‘flag {…}’, so the flag was 'above my door’ (75 points). the second set of points came from making a new friend who solved the Rubik’s cube on my behalf faster than 1min 30sec (30 points).
 
