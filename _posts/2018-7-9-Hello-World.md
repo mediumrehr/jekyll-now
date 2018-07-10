@@ -1,7 +1,7 @@
 ---
 layout: post
 title: this is just a test.
-tag:test
+tags:test
 ---
 
 123.
