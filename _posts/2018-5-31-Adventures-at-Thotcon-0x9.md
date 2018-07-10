@@ -3,7 +3,7 @@ layout: post
 title: Adventures at Thotcon 0x9
 ---
 
-![image-title-here](/images/404.png){:width="100px"}
+![]({{ site.baseurl }}/images/404.png){:width="100px"}
 
 i’ve been missing out on [thotcon](https://thotcon.org/) the past few years while living in chicago, so i was happy to finally attend for the 9th installment. my goal from the start was to compete in the badge ctf in hopes of winning a coveted gold badge (admission to thotcon for life). i’m sad to say i missed most of the talks, but i had a blast crunching through the puzzles cooked up by [sakebomb](https://twitter.com/sakebomb).
 
