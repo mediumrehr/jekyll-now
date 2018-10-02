@@ -1,11 +1,9 @@
 ---
 layout: post
-title: DEF CON China (Beta) and Hacking a Boxing Game
+title: DEF CON China (Beta) and Arcade Hacking
 date: 2018-06-07 00:00:00 -0000
 categories: [hacking, defcon, travel]
 ---
-
-#### Pre Con
 
 This was the first (beta) year of DEF CON China, and it took place in the city of Beijing. I was lucky enough to attend and represent the [Hardware Hacking Village](https://dchhv.org), along with my long-time friend, [Grungy](https://twitter.com/Grngy). We didn't really know what to expect (I don't think anyone did), but with the help of some of the other HHV members, a month before the event we submitted a list of tools/materials we wanted to have available for attendees (soldering supplies, select tools, and beginner friendly soldering kits).
 
