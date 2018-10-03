@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Adventures at Thotcon 0x9
+date: 2018-05-31 00:00:00 -0000
+categories: [hacking, thotcon, chicago]
 youtubeId: v3yVL2lNKM4
 ---
 

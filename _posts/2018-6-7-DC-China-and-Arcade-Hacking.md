@@ -11,7 +11,7 @@ We arrived on Tuesday in an effort to adapt to the time change before the con, a
 
 ![]({{site.baseurl}}/images/dc_china_beta/great_wall.jpg)
 
-#### Who Let the Attendees Out?!
+#### Release the attendees!
 
 We weren't able to start setting up the space until early Friday morning, but thanksfully some student helpers came by and gave us a hand. We originally set up about a dozen soldering stations, but we quickly learned that twelve irons were not enough. We ended up setting up all 20 irons and they remained occupied from opening (930a) until close (530-6p). We had to kill the power after announcing closing because people wanted to keep soldering!
 
