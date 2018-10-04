@@ -2,6 +2,7 @@
 layout: post
 title: Adventures at Thotcon 0x9
 date: 2018-05-31 00:00:00 -0000
+image: /assets/adventures_at_thotcon_0x9/badge_back.jpg
 categories: [hacking, thotcon, chicago]
 youtubeId: v3yVL2lNKM4
 ---
@@ -10,7 +11,7 @@ i’ve been missing out on [thotcon](https://thotcon.org/) the past few years wh
 
 once i arrived and received my badge and program i started searching through the materials for a starting point. on page 27 on the program i found five numbered puzzles. they were pretty straight forward; hex to ascii, cryptogram, morse code, number to letter, cryptogram, and a pattern. there was also an unmarked puzzle in red, a pigpen cipher that pointed towards badge ctf webpage once deciphered. unfortunately, at the time of solving this, the site wasn’t live yet, so i moved on to the badge.
 
-![pamphlet puzzles]({{ site.baseurl }}/images/adventures_at_thotcon_0x9/pamphlet_puzzles.png){:width="700px"}
+![pamphlet puzzles](/assets/adventures_at_thotcon_0x9/pamphlet_puzzles.png){:width="700px"}
 
 the badge hardware consisted of an esp8266 (and eeprom) with a screen and three buttons. the binary for the badge had been released the night before, so i had already looked it over in [Hex Fiend](https://ridiculousfish.com/hexfiend/). a few cipher looking strings displayed on boot, but none of them seemed significant, only coming up to variations of “THOTCON” once deciphered. the initial firmware featured a thotcoin (the official coin of thotcon) mining game, a store to buy thotcoin mining upgrades, and space invaders. to mine thotcoins, you needed to rapidly press the center button on the badge. this seemed tedious, so i probed the center button to find that it was just pulling the GPIO low, so in an attempt to save myself from developing arthritis in my thumb by the end of the con, i attached an arduino pro mini to the center button GPIO and i programmed it to simulate button presses at the rate of 1 press/millisecond.
 
@@ -22,7 +23,7 @@ i figured pickaxe value was stored in the eeprom because pickaxe level persisted
 
 $$$JACKPOT$$$
 
-![thotcon miner]({{ site.baseurl }}/images/adventures_at_thotcon_0x9/thotcon_miner.jpg){:width="700px"}
+![thotcon miner](/assets/adventures_at_thotcon_0x9/thotcon_miner.jpg){:width="700px"}
 
 at this point, it seemed i had made it as far as i could at the time on the badge since the next firmware upgrade was still being developed, so i checked back with the badge ctf website. the site was finally live! i submitted flags for the ciphers i had solved in the con booklet, and a few other challenges (ranging 5-30 points each) local to the challenge site; finding a flag in an image’s exif data, analyzing an ftp stream capture to track down a flag, finding another flag in an image’s binary, and correcting the header on a file to reveal the flag.
 
@@ -32,7 +33,7 @@ i quickly attached an LED to the badge and made it blink. that was nowhere near 
 
 that night, i solved a few more cipher challenges (20-30 points) on the badge ctf site and i was able to pull into the top 3. if i wanted to get the first spot, i had a lot of work ahead of me.
 
-![badge back]({{ site.baseurl }}/images/adventures_at_thotcon_0x9/badge_back.jpg){:width="700px"}
+![badge back](/assets/adventures_at_thotcon_0x9/badge_back.jpg){:width="700px"}
 
 day 2
 
@@ -46,11 +47,11 @@ that morning i also completed two other challenges. first, i tuned into the radi
 
 time was ticking, so i returned to the badge, which now had a new challenge available. the new challenge cycled through displaying three parts of a qr code. i took a picture of each display, recorded the bit orders, and then generated cleaner versions. i was a little suspicious from the start that there were only 3 different sections of the qr code displayed, and after recreating and piecing them together, it was clear they were quarters and i was still missing a quarter. for a 50 point challenge, i didn’t expect i’d have to reverse a qr code, so i asked the badge creators if this was intentional. turns out it was not. they reflashed my badge, i recreated the last quarter of the qr code, it was a link to a badge firmware, and i solved the challenge by entering the name of the binary(50 points). (sidenote: i noticed there was a binary with an odd filename uploaded to the badge firmware website the night before. turns of the name of that binary was the flag. could have guessed and saved some time…oops)
 
-![qr code conversion]({{ site.baseurl }}/images/adventures_at_thotcon_0x9/qr_convert.png){:width="700px"}
+![qr code conversion](/assets/adventures_at_thotcon_0x9/qr_convert.png){:width="700px"}
 
 the new firmware unlocked a new challenge that listed a half-dozen commands, up, down, left, right, A, B. my mind immediately jumped to the Konami code (the code was also shown in the con booklet), so i used the commands to enter it in. success! a qr code was displayed that pointed me to a webpage with a barcode.
 
-![toaster drm barcode]({{ site.baseurl }}/images/adventures_at_thotcon_0x9/barcode.png){:width="700px"}
+![toaster drm barcode](/assets/adventures_at_thotcon_0x9/barcode.png){:width="700px"}
 
 the challenge with the highest point bounty was still unsolved by anyone, so i wondered if the barcode i just uncovered was related to that. the challenge was to crack the drm on a toaster to toast a piece of bread. this required scanning the barcode for a compatible bread, and then scanning a barcode to pass the drm check. i had gotten lucky with my timing because when i showed up to the toaster, lt. dan (another attendee competing in the ctf) was working on the challenge as well. he had solved the fist part of the problem, and had the barcode for the bread. we agreed to combine our solutions to both solve the challenge. after some help from a friendly bartender, i was able to secure two pieces of white bread for the toaster. barcodes scanned, bread toasted, flag acquired (250 points!).
 

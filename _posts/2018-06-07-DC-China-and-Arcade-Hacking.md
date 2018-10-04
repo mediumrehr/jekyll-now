@@ -2,6 +2,7 @@
 layout: post
 title: DEF CON China (Beta) and Arcade Hacking
 date: 2018-06-07 00:00:00 -0000
+image: /assets/dc_china_beta/great_wall.jpg
 categories: [hacking, defcon, travel]
 ---
 
@@ -9,7 +10,7 @@ This was the first (beta) year of DEF CON China, and it took place in the city o
 
 We arrived on Tuesday in an effort to adapt to the time change before the con, as well as to have time to check out some of the tourist areas before we were consumed by the con. We lucked out and ran into [Jayson Street](https://twitter.com/jaysonstreet) and not only did he recommend how to go about visiting the Summer Palace (which we visited on Wednesday), he also organzied a trip for a few of us foreigners to visit the Great Wall Thursday morning.
 
-![]({{site.baseurl}}/images/dc_china_beta/great_wall.jpg)
+![](/assets/dc_china_beta/great_wall.jpg)
 
 #### Release the attendees!
 
@@ -23,14 +24,14 @@ Saturday night was the big DEF CON party. It was fun, but it ended early (10p) a
 
 DEF CON had rented a couple arcade machines for attendees to play, and one particular cabinet caught the attention of many passerbys, [World Boxing Championship](https://youtu.be/mwpsUotTKU4). Everyone wanted to show off; trying to throw the hardest punches. The game was played by hitting a punching pad as hard as you could, three separate times. Each punch, a score was given based on the force calculated by the game, and the final score was the sum of the three attempts. The highest score stayed shown on the cabinet, glowing in all of it's red, segmented display glory.
 
-![]({{site.baseurl}}/images/dc_china_beta/world_boxing_champ.jpg)
+![](/assets/dc_china_beta/world_boxing_champ.jpg)
 
 While hanging in the con area, Grungy mentioned wanting to see what was inside the game's cabinet. With a little bit of force, we were able to get the back of the cabinet open and we started snooping around. We identified some key components (power supply, processing board, light controllers). We also noticed a few wires running along the inside of the cabinet that looked like they were coming from something relating to the punching pad. To test this, after hitting the ```Start``` button, I disconnected the wires from the processor and we gave the pad a punch. Nothing happened in the game. These wires seemed like a fun place to start investigating.
 
 At this point, Grungy headed off to bed, but I continued poking around after grabbing my portable oscilloscope from my room (I'm not good at traveling light). After some sniffing, I identified two signals that were affected by the punching pad's position/angle. The first signal was grounded until the punching pad was moved from its resting position; at which point it became floating. The second signal was floating until the punching pad went back almost as far as it could go, and at that point it became grounded. Judging by the simplicity of the system, it didn't seem far-fetched to think that the game system was measuring the time between the two signals changing and using that as its "punch force" calculation, rather than a force sensor.
 
 
-![]({{site.baseurl}}/images/dc_china_beta/sniffing_around.jpg)
+![](/assets/dc_china_beta/sniffing_around.jpg)
 
 By this time, I was feeling tired, so I paused my investigation and went to bed.
 
@@ -43,7 +44,7 @@ My plan was to break out the two signals I had identified and route them to two 
 As soon as the HHV was up and running, I ducked out with Zoz and walked over to World Boxing Championship to setup the attack. Once I connected the "punch spoofer", Zoz tapped the ```Start``` button and I attempted to simulate a punch, quickly pressing the first button, and then the second. It worked! Although, it only resulted in a score of 400kg, the lowest possible punch force. I tried it again, 400kg... I began to fear my goal of having the highest possible score was only going to lead me to the all-time lowest.
 
 
-![]({{site.baseurl}}/images/dc_china_beta/punch_spoofer.jpg)
+![](/assets/dc_china_beta/punch_spoofer.jpg)
 
 After a few rounds, and a little practice, I was registering mid 400's; still far from the highscore. At this point Zoz wanted to have a try, so we switched roles and I took over starting a new game and reading off scores (I guess I could have added a third button for triggering a new game from the back). Zoz immediately identified that the second button/signal wasn't necessary. All that mattered was how long the first button was pressed. Using a quick, yet delicate, technique to press the button, he registered some of the hardest punches that machine had likely ever seen. Although we wer unable to earn a perfect score, we were only 10kg off and the score was unbeatable by anyone playing the old-fashioned way.
 
@@ -56,4 +57,4 @@ I didn't receive a black badge or anything as a result, but it felt awesome to h
 DEF CON China Beta will always have a special place in my heart, from the amazing people I met, to all of the exciting things I was able to do and see. I really hope I'll be able to return next year!
 
 
-![]({{site.baseurl}}/images/dc_china_beta/champions.jpg)
+![](/assets/dc_china_beta/champions.jpg)
